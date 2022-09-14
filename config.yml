@@ -16,9 +16,7 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - run: 
-          name: Save
-          command: echo "hello world" > ~/output.txt
+      - run: echo "hello world" > ~/output.txt
       - print_pipeline_id:
           id: A
       - persist_to_workspace:
