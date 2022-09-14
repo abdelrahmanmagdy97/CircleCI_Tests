@@ -20,7 +20,7 @@ jobs:
           name: Save helloworld
           command: echo "hello world" > ~/output.txt
       - print_pipeline_id:
-          id: << pipeline.id >> 
+          id: "Bye"
       - persist_to_workspace:
           root: ~/
           paths:
