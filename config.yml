@@ -43,7 +43,7 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - run:
-            name: say hello
+            name: say hellooo
             command: echo Hello, World
 
 # Invoke jobs via workflows
