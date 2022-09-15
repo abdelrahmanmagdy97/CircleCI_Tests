@@ -50,7 +50,9 @@ jobs:
 workflows:
   my-workflow:
     jobs:
-      - say-hello
+      - say-hello: 
+          requires:
+            - save_hello_world_output
       - save_hello_world_output
       - print_output_file:
           requires: 
