@@ -42,8 +42,9 @@ jobs:
     steps:
       - run:
             name: say hellooo
-            command: echo Hellooo, World
-
+            command: 
+            - echo Hellooo, World
+            - echo byee world
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
