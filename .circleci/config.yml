@@ -16,7 +16,7 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - run: echo "hello world" > ~/output.txt
+      - run: echo "helloooo world" > ~/output.txt
       - print_pipeline_id:
           id: A
       - persist_to_workspace:
@@ -42,13 +42,17 @@ jobs:
     steps:
       - run:
             name: say hellooo
-            command: echo Hellozz, World
-
+            command: 
+            - echo Hellooo, World
+            - return 1
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
   my-workflow:
     jobs:
+      - say-hello: 
+          requires:
+            - save_hello_world_output
       - save_hello_world_output
       - print_output_file:
           requires: 
