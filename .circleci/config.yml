@@ -44,7 +44,7 @@ jobs:
             name: say hellooo
             command: 
              echo Hellooo, World
-             return 1
+             exit 1
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
